@@ -1,4 +1,6 @@
-﻿using BookstoreManager.Models;
+﻿using BookstoreManager.Dto;
+using BookstoreManager.Enums;
+using BookstoreManager.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookstoreManager.Controllers
@@ -10,35 +12,48 @@ namespace BookstoreManager.Controllers
         public static readonly List<Book> _books = new List<Book>();
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(Book), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Create([FromBody] Book book)
+        public IActionResult Create([FromBody] BookDto bookDto)
         {
-            if (book.Price <= 0 || book.Stock <= 0) 
-            {
+            if (!Enum.TryParse<BookGenre>(bookDto.Genre, true, out var genreResult))
+            {   
                 return BadRequest(new
                 {
-                    error = "Validação falhou!",
-                    Message = "O preço ou estoque não pode ser menor que 0!"
+                    Error = $"O gênero {bookDto.Genre} é inválido.",
+                    OpcoesValidas = Enum.GetNames(typeof(BookGenre)),
                 });
             }
 
-            book.Id = Guid.NewGuid();
+            var book = new Book
+            {
+                Title = bookDto.Title,
+                Author = bookDto.Author,
+                Genre = genreResult,
+                Price = bookDto.Price,
+                Stock = bookDto.Stock
+            };
 
             _books.Add(book);
             return Created();
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<Book>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetAll()
         {
+            if (!_books.Any())
+            {
+                return NotFound("Não existe nenhum livro!");
+            }
+
             return Ok(_books);
-        }
+        }  
 
         [HttpGet]
         [Route("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Book),StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetById(Guid id)
         {
@@ -46,7 +61,7 @@ namespace BookstoreManager.Controllers
 
             if (response == null)
             {
-                return NotFound(new { message = "Livro não encontrado" });
+                return NotFound(new { message = "Livro não encontrado!" });
             }
             return Ok(response);
         }
@@ -55,11 +70,14 @@ namespace BookstoreManager.Controllers
         [Route("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Update(Guid id, [FromBody] Book updateBook)
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult Update(Guid id, [FromBody] BookDto updateBook)
         {
-            if (id != updateBook.Id)
+            var bookFound = _books.FirstOrDefault(x => x.Id == id);
+
+            if (bookFound== null)
             {
-                return BadRequest("Livro não encontrado");
+                return NotFound("Livro não encontrado");
             }
 
             if (updateBook.Price <= 0 && updateBook.Stock <= 0)
@@ -71,14 +89,13 @@ namespace BookstoreManager.Controllers
                 });
             }
 
-            var bookFound = _books.FirstOrDefault(x => x.Id == id);
+            Enum.TryParse<BookGenre>(updateBook.Genre, true, out var genreResult);
 
             bookFound.Title = updateBook.Title;
             bookFound.Author = updateBook.Author;
-            bookFound.Genre = updateBook.Genre;
+            bookFound.Genre = genreResult;
             bookFound.Price = updateBook.Price;
             bookFound.Stock = updateBook.Stock;
-
 
             return NoContent();
         }

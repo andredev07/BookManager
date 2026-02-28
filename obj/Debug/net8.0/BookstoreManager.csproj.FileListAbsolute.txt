@@ -30,3 +30,4 @@ C:\Users\andre.matheus\Documents\dev\Rocketseat\BookstoreManager\obj\Debug\net8.
 C:\Users\andre.matheus\Documents\dev\Rocketseat\BookstoreManager\obj\Debug\net8.0\BookstoreManager.pdb
 C:\Users\andre.matheus\Documents\dev\Rocketseat\BookstoreManager\obj\Debug\net8.0\BookstoreManager.genruntimeconfig.cache
 C:\Users\andre.matheus\Documents\dev\Rocketseat\BookstoreManager\obj\Debug\net8.0\ref\BookstoreManager.dll
+C:\Users\andre.matheus\Documents\dev\Rocketseat\BookstoreManager\obj\Debug\net8.0\BookstoreManager.sourcelink.json

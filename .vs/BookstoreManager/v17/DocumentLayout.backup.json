@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|c:\\users\\andre.matheus\\documents\\dev\\rocketseat\\bookstoremanager\\dtos\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|solutionrelative:dtos\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|c:\\users\\andre.matheus\\documents\\dev\\rocketseat\\bookstoremanager\\enums\\bookgenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|solutionrelative:enums\\bookgenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|c:\\users\\andre.matheus\\documents\\dev\\rocketseat\\bookstoremanager\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA9085A2-0F84-45A9-9590-27EF8B806A12}|BookstoreManager.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,17 +26,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookGenre.cs",
+              "DocumentMoniker": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Enums\\BookGenre.cs",
+              "RelativeDocumentMoniker": "Enums\\BookGenre.cs",
+              "ToolTip": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Enums\\BookGenre.cs",
+              "RelativeToolTip": "Enums\\BookGenre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T21:34:31.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BookDto.cs",
+              "DocumentMoniker": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\DTOs\\BookDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\BookDto.cs",
+              "ToolTip": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\DTOs\\BookDto.cs",
+              "RelativeToolTip": "DTOs\\BookDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T13:47:16.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Models\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Book.cs",
               "ToolTip": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Models\\Book.cs",
               "RelativeToolTip": "Models\\Book.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowB8AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T20:06:15.683Z",
               "EditorCaption": ""
@@ -39,9 +73,9 @@
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBwAAAAdAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\andre.matheus\\Documents\\dev\\Rocketseat\\BookstoreManager\\Controllers\\BookController.cs*",
+              "RelativeToolTip": "Controllers\\BookController.cs*",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwEIAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T18:31:30.244Z",
               "EditorCaption": ""
